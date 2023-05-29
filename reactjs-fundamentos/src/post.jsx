@@ -1,6 +1,6 @@
 // ou export
-function Post() {
-  return <p>post</p>;
+function Post(props) {
+  return <p>{props.content}</p>;
 }
 
 export default Post;
