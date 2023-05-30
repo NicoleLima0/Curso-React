@@ -1,8 +1,8 @@
-// ou import { Post } from "./post.jsx";
-import Post from "./post.jsx";
+import { Post } from "./components/Post";
 import { Header } from "./components/header.jsx";
-import styles from "./App.module.css";
 import { Sidebar } from "./components/Sidebar.jsx";
+
+import styles from "./App.module.css";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
         <Sidebar />
         <main>
           <Post content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus libero deserunt sed voluptates dolorem esse magnam asperiores adipisci est repellat debitis, voluptatibus dolorum dolores ex, magni sunt facere non vel!" />
+          <Post content="" />
         </main>
       </div>
     </div>
