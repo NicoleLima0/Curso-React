@@ -1,6 +1,7 @@
 import { Post } from "./components/Post";
 import { Header } from "./components/header.jsx";
 import { Sidebar } from "./components/Sidebar.jsx";
+import { Scrollbars } from "./components/Scrollbars.jsx";
 
 import styles from "./App.module.css";
 
