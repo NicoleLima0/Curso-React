@@ -1,9 +1,49 @@
 import { Post } from "./components/Post";
 import { Header } from "./components/header.jsx";
 import { Sidebar } from "./components/Sidebar.jsx";
-import { Scrollbars } from "./components/Scrollbars.jsx";
 
 import styles from "./App.module.css";
+
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: "https://github.com/NicoleLima0.png",
+      name: "Nicole Lima",
+      role: "Web Developer",
+    },
+    content: [
+      { type: "paragraph", content: "Fala galeraa 👋" },
+      {
+        type: "paragraph",
+        content:
+          "Acabei de subir mais um projeto no meu portifolio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀",
+      },
+      { type: "link", content: "victor.design/doctorcare" },
+    ],
+    publishedAt: new Date("2002-06-02 20:00:00"),
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl: "https://github.com/VictorMaciel-dsn.png",
+      name: "Victor Maciel",
+      role: "Web Developer",
+    },
+    content: [
+      { type: "paragraph", content: "Fala galeraa 👋" },
+      {
+        type: "paragraph",
+        content:
+          "Acabei de subir mais um projeto no meu portifolio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀",
+      },
+      { type: "link", content: "victor.design/doctorcare" },
+    ],
+    publishedAt: new Date("2002-06-10 20:00:00"),
+  },
+];
+
+// Iteração - criar uma estrutura de repetição
 
 function App() {
   return (
@@ -12,8 +52,15 @@ function App() {
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
-          <Post content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus libero deserunt sed voluptates dolorem esse magnam asperiores adipisci est repellat debitis, voluptatibus dolorum dolores ex, magni sunt facere non vel!" />
-          <Post content="" />
+          {posts.map((post) => {
+            return (
+              <Post
+                author={post.author}
+                content={post.content}
+                publishedAt={post.publishedAt}
+              />
+            );
+          })}
         </main>
       </div>
     </div>
