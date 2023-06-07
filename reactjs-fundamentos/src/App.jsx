@@ -21,7 +21,7 @@ const posts = [
       },
       { type: "link", content: "victor.design/doctorcare" },
     ],
-    publishedAt: new Date("2002-06-02 20:00:00"),
+    publishedAt: new Date("2023-06-02 20:00:00"),
   },
   {
     id: 2,
