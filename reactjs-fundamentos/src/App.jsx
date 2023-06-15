@@ -39,7 +39,7 @@ const posts = [
       },
       { type: "link", content: "victor.design/doctorcare" },
     ],
-    publishedAt: new Date("2002-06-10 20:00:00"),
+    publishedAt: new Date("2023-06-10 20:00:00"),
   },
 ];
 
@@ -55,6 +55,7 @@ function App() {
           {posts.map((post) => {
             return (
               <Post
+                key={post.id}
                 author={post.author}
                 content={post.content}
                 publishedAt={post.publishedAt}
@@ -69,5 +70,6 @@ function App() {
 
 export default App;
 
+// key é uma chave para identificar cada elemento ou compomente dentro de um array
 // Componente nada mais é do que uma função que retorna HTML
 // Para ser possível colocar vários posts é necessário algo que englobe tudo como a DIV.
