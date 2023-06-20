@@ -1,10 +1,16 @@
 import { ThumbsUp, Trash } from "@phosphor-icons/react";
 import styles from "./Comment.module.css";
 import { Avatar } from "./Avatar.jsx";
+import React from "react";
 
 export function Comment({ content, onDeleteComment }) {
+  const [likeCount, setLikeCount] = React.useState(0);
   function handleDeleteComment() {
-    onDeleteComment(content)
+    onDeleteComment(content);
+  }
+
+  function handleLikeComment() {
+    setLikeCount(likeCount + 1);
   }
 
   return (
@@ -15,8 +21,8 @@ export function Comment({ content, onDeleteComment }) {
           <header>
             <div className={styles.authorAndTime}>
               <strong>Nicole Carvalho</strong>
-              <time title="30 de Maio às 14:38" dateTime="2023-05-30">
-                Cerca de 1h atrás
+              <time title="20 de Junho às 11:38" dateTime="2023-06-20">
+                Agora
               </time>
             </div>
             <button onClick={handleDeleteComment} title="Deletar comentário">
@@ -26,9 +32,9 @@ export function Comment({ content, onDeleteComment }) {
           <p>{content}</p>
         </div>
         <footer>
-          <button>
+          <button onClick={handleLikeComment}>
             <ThumbsUp />
-            Aplaudir <span>20</span>
+            Aplaudir <span>{likeCount}</span>
           </button>
         </footer>
       </div>

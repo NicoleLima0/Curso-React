@@ -9,7 +9,7 @@ const posts = [
     id: 1,
     author: {
       avatarUrl: "https://github.com/NicoleLima0.png",
-      name: "Nicole Lima",
+      name: "Nicole Carvalho",
       role: "Web Developer",
     },
     content: [
@@ -19,15 +19,15 @@ const posts = [
         content:
           "Acabei de subir mais um projeto no meu portifolio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀",
       },
-      { type: "link", content: "victor.design/doctorcare" },
+      { type: "link", content: "nicole.design/doctorcare" },
     ],
-    publishedAt: new Date("2023-06-02 20:00:00"),
+    publishedAt: new Date("2023-06-20 11:00:00"),
   },
   {
     id: 2,
     author: {
-      avatarUrl: "https://github.com/VictorMaciel-dsn.png",
-      name: "Victor Maciel",
+      avatarUrl: "https://github.com/NicoleLima0.png",
+      name: "Nicole Carvalho",
       role: "Web Developer",
     },
     content: [
@@ -39,7 +39,7 @@ const posts = [
       },
       { type: "link", content: "victor.design/doctorcare" },
     ],
-    publishedAt: new Date("2023-06-10 20:00:00"),
+    publishedAt: new Date("2023-06-20 11:00:00"),
   },
 ];
 
